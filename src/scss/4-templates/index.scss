@@ -1,0 +1,38 @@
+#first-section {
+    background: url('../img/palace-of-justice.png') no-repeat center center/cover;
+    height: 70vh;
+    position: relative;
+    .container {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        .text-content {
+            align-self: center;
+            opacity: 0;
+            transition: 2s;
+            h1 {
+                margin-bottom: 20px;
+            }
+        }
+        .lawyers-images-div {
+            img {
+                opacity: 0;
+                transition: 1s;
+                position: relative;
+                right: -50px;
+
+            }
+        }
+    }
+
+    .satisfied-clients {
+        height: 300px;
+        width: 300px;
+        max-width: 60%;
+        max-height: 60%;
+        background-color: blue;
+        position: absolute;
+        bottom: -25%;
+    }
+}

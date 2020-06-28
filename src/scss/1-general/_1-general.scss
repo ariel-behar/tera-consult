@@ -1,0 +1,14 @@
+// ****************** reset.scss or normalize.scss **************** 
+
+// @import 'reset'; // Completely removes all default CSS styling(clean slate) for browser consistency
+// @import 'normalize.scss'; // Selectively destroys default CSS styling for browser consistency
+
+//If you're using bootstrap, it's already built on top of normalize.css
+// ****************** reset.scss or normalize.scss ****************
+
+@import 'typography';
+@import 'variables';
+@import 'mixins';
+@import 'functions';
+@import 'global';
+@import 'media-queries';
