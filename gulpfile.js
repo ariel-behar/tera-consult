@@ -226,7 +226,7 @@ task('image', done => {
     src(srcFile.img)
         .pipe(
             imagemin({
-                verbose: true,
+                // verbose: true,
             })
         ) //Minifies images
         // .pipe(rev()) //Creates the hashed image files

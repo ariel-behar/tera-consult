@@ -3,7 +3,9 @@ const router = express.Router();
 
 router.get('/', (req, res, next) => {
     res.render('index', {
-        title: 'main', //This also serves as the guide to which JS file to use on each page
+        title: 'Начало',
+        clients: '123456'
+
     });
 });
 

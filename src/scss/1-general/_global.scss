@@ -20,15 +20,23 @@
         font-size: 2rem;
     }
     h6 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
     p {
         font-size: 1rem;
     }
 }
 
-.container {
-    width: 90%;
-    max-width: 1100px;
-    margin: auto;
+
+body {
+    background-color: $general-grey;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+main {
+    flex-grow: 1;
+
 }
