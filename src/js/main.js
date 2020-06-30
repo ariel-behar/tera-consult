@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let mainTitleTextContent = document.querySelector('#first-section > div > div.text-content');
+    let mainTitleTextContent = document.querySelector('#index-first-section >div >div > div.text-content');
     let lawyersImg = document.querySelector('.lawyers-images-div > img')
     
     lawyersImg.style.opacity = 1;
@@ -28,15 +28,15 @@ const stanish = new ServiceProvider('ariel.jpg','stanish','Станиш Злат
 
 function indexPageInsertElements(serviceProvider) {
 
-    const serviceProviderDiv = document.getElementById(`index-page-${serviceProvider.nickname}`)
+    const serviceProviderDiv = document.querySelector(`#index-page-${serviceProvider.nickname} > .img-holder`)
 
     serviceProviderDiv.insertAdjacentHTML("afterbegin", `<img src="./img/ariel.jpg" alt="${serviceProvider.name} - ${serviceProvider.profession}" class="service-provider-image">`);
 
     
-    const providerName = document.querySelector(`#index-page-${serviceProvider.nickname} > .name`);
-    const providerProfession = document.querySelector(`#index-page-${serviceProvider.nickname} > .profession`);
-    const providerExperience = document.querySelector(`#index-page-${serviceProvider.nickname} > .experience`);
-    const providerServices = document.querySelector(`#index-page-${serviceProvider.nickname} > .services`);
+    const providerName = document.querySelector(`#index-page-${serviceProvider.nickname} > .service-provider-details > .name`);
+    const providerProfession = document.querySelector(`#index-page-${serviceProvider.nickname}  > .service-provider-details > .profession`);
+    const providerExperience = document.querySelector(`#index-page-${serviceProvider.nickname}  > .service-provider-details > .experience`);
+    const providerServices = document.querySelector(`#index-page-${serviceProvider.nickname} > .service-provider-details > .services`);
 
 
     providerName.textContent = serviceProvider.name;

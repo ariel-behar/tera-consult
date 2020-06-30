@@ -1,37 +1,42 @@
-#first-section {
+#index-first-section {
     background: url('../img/palace-of-justice.png') no-repeat center center/cover;
-    height: 70vh;
+    height: 80vh;
     position: relative;
+    .container {
+        height: 100%;
+        .row {  
+            height: 100%;
+            .text-content {
+                align-self: center;
+                opacity: 0;
+                transition: 2s;
+                h1 {
+                    margin-bottom: 20px;
+                }
+            }
+            .lawyers-images-div {
+                padding: 0;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-self: flex-end;
+                img {
+                    opacity: 0;
+                    transition: 1s;
+                    position: relative;
+                    right: -50px;
+                }
+            }
+            
+        }
+    }
+    
     .grey-bottom-img {
         z-index: 1;
         width: 100%;
         position: absolute;
         bottom: 0;
     }
-    .container {
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        .text-content {
-            align-self: center;
-            opacity: 0;
-            transition: 2s;
-            h1 {
-                margin-bottom: 20px;
-            }
-        }
-        .lawyers-images-div {
-            img {
-                opacity: 0;
-                transition: 1s;
-                position: relative;
-                right: -50px;
-
-            }
-        }
-    }
-
     .satisfied-clients {
         min-height: 150px;
         min-width: 35%;
@@ -39,9 +44,9 @@
         max-height: 20%;
         background-color: white;
         position: absolute;
-        bottom: -10%;
+        bottom: -5%;
         left: 30%;
-        transform: translate(-30%,-10%) skew(-25deg);
+        transform: translate(-30%,-5%) skew(-25deg);
         padding: 20px;
         border-top-left-radius: 50px;
         border-bottom-right-radius: 50px;
@@ -55,58 +60,64 @@
     }
 }
 
-#second-section {
+#index-second-section {
     padding-top: 100px;
     min-height: 200px;
-    .our-mission-box {
-    }
+
 }
 
-#third-section {
+#index-third-section {
     margin-top: 50px;
     min-height: 200px;
-    .our-mission-box {
 
-    }
 }
 
-#fourth-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+#index-fourth-section {
     padding-top: 30px;
     h3 {
-
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: 60px;
     }
     .service-providers {
-        display: flex;
-        justify-content: space-between;
         .service-provider {
-            text-align: center;
-            .service-provider-image {
-                width: 60%;
-            }
-            h5 {
-                margin: 15px 0;
-            }
-            h6{
-                margin: 5px 0;
-            }
-            .services {
-                list-style: none;
-                margin-top: 20px;
-                text-align: left;
+            height: 100%;
+            background-color: white;
 
-                li {
-                    margin: 10px 0;
+            border-radius: 10px;
+            .img-holder {
+                position: relative;
+                top: -50px;
+                left: -5%;
+                .service-provider-image {
+                    width: 110%;
+                    box-shadow: 0px 0px 20px 4px rgba(158,158,158,1);
+                }
+            }
+            .service-provider-details {
+                margin: 0 5px 15px;
+                padding: 0 15px ;
+
+                .name {
+                margin-bottom: 15px;
+                }
+                .profession{
+                    margin: 5px 0;
+                }
+
+                .services {
+                    list-style: none;
+                    margin-top: 20px;
+                    text-align: left;
+
+                    li {
+                        margin: 5px 0;
+                    }
                 }
             }
         }       
     }
 }
 
-#fifth-section {
+#index-fifth-section {
 
 }

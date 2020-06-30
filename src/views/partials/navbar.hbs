@@ -1,12 +1,27 @@
-<nav>
-    <div class="nav-logo-div">
-        <a href="/" target="_self"><img class="nav-logo" src="./img/tera.png" alt="Tera Logo"></a>
-    </div>
-    <ul class="nav-items">
-        <li class="nav-item"><a href="/" target="_self">Начало</li></a>
-        <li class="nav-item"><a href="/services" target="_self">Услуги</a></li>
-        <li class="nav-item"><a href="/about" target="_self">За Нас</a></li>
-        <li class="nav-item"><a href="/contact" target="_self">Контакт</a></li>
-    </ul>
+<nav class="container navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <a href="/" target="_self"><img class="nav-logo" src="./img/tera.png" alt="Tera Logo"></a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
 
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarToggler">
+        
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Начало<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/services">Услуги</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/about">За Нас</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/contact">Контакт</a>
+            </li>
+        </ul>
+
+    </div>
 </nav>
