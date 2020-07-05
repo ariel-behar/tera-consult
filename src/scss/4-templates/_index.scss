@@ -1,5 +1,4 @@
 #index-first-section {
-    background: url('../img/palace-of-justice.png') no-repeat center center/cover;
     height: 80vh;
     position: relative;
     .container {
@@ -31,12 +30,6 @@
         }
     }
     
-    .grey-bottom-img {
-        z-index: 1;
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-    }
     .satisfied-clients {
         min-height: 150px;
         min-width: 35%;
@@ -44,7 +37,7 @@
         max-height: 20%;
         background-color: white;
         position: absolute;
-        bottom: -5%;
+        bottom: 0;
         left: 30%;
         transform: translate(-30%,-5%) skew(-25deg);
         padding: 20px;
@@ -52,23 +45,121 @@
         border-bottom-right-radius: 50px;
         border: 2px solid white;
         text-align: center;
-        box-shadow: 10px 10px 28px -2px black;
+        box-shadow: 10px 10px 28px -2px $grey;
         z-index: 5;
         * {
             transform: skew(25deg);
         }
     }
+
+    .white-box {
+        position: absolute;
+        background: url(../img/pattern.png);
+        bottom: -20%;
+        left: -15%;
+        z-index: 1;
+        width: 130%;
+        height: 30%;
+        transform: rotate(5deg);
+
+    }
 }
 
 #index-second-section {
-    padding-top: 100px;
-    min-height: 200px;
+    border-top: 2px solid $grey;
+    border-bottom: 2px solid $grey;
+    border-right: 2px solid $grey;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    background: #cac7bd; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #cac7bd 0%, #e4e1d9 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #cac7bd 0%,#e4e1d9 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #cac7bd 0%,#e4e1d9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cac7bd', endColorstr='#e4e1d9',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    margin: 70px 0;
+    position: relative;
+    div:first-child {
+        position: absolute;
+        left: -15px;
+        top: 0;
+        bottom: 0;
+        background: url('../img/pattern.png') repeat;
+        img {
+            max-height: 100%;
+        }
+    }
+    div:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 30px 0;
+        h3 {
+            text-align: center;
+        }
+        span {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+    }
+    div:nth-child(3) {
+        padding: 0;
+
+        img {
+            width: 100%;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+    }
 
 }
 
 #index-third-section {
-    margin-top: 50px;
-    min-height: 200px;
+
+    h3 {
+        text-align: center;
+        margin: 40px 0;        
+    }
+    .choice-quality {
+        background-image: url('../img/listen.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 300px;
+        padding: 0;
+
+        .mask {
+            background-color:rgba(0,0,0,0.3);
+            cursor: pointer;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s ease-in-out;
+            padding: 0 10px;
+            h6,p {
+            color: white;
+            }
+            h6 {
+                text-align: center;
+                margin: 20px;
+            }
+            p {
+                text-align: justify;
+                display: none;
+                transition: 0.5s ease-in-out;
+            }
+            img {
+                display: none;
+                width: 30%;
+            }
+        }
+        
+
+    }
+   
 
 }
 
