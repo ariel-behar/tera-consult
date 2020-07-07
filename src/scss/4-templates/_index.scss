@@ -78,7 +78,7 @@
     background: linear-gradient(135deg,  #cac7bd 0%,#e4e1d9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cac7bd', endColorstr='#e4e1d9',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
-    margin: 70px 0;
+    margin: 50px 0;
     position: relative;
     div:first-child {
         position: absolute;
@@ -116,37 +116,67 @@
 }
 
 #index-third-section {
-
+   margin: 50px 0;
+    .first-row {
+         margin-bottom: 30px;
+        .choice-quality {
+            &:nth-child(1) {
+                background-image: url('../img/icons/icon1.png');
+            }
+            &:nth-child(2) {
+                background-image: url('../img/icons/icon2.png');
+            }
+            &:nth-child(3) {
+                background-image: url('../img/icons/icon3.png');
+            }
+        }
+    }
+    .second-row {
+        .choice-quality {
+            &:nth-child(1) {
+                background-image: url('../img/icons/icon4.png');
+            }
+            &:nth-child(2) {
+                background-image: url('../img/icons/icon5.png');
+            }
+            &:nth-child(3) {
+                background-image: url('../img/icons/icon6.png');
+            }
+        }
+    }
     h3 {
         text-align: center;
-        margin: 40px 0;        
+        margin: 0 0 40px 0;        
     }
     .choice-quality {
-        background-image: url('../img/listen.jpg');
-        background-size: cover;
+        background-size: contain;
+        background-position: center center;
         background-repeat: no-repeat;
-        min-height: 300px;
+        min-height: 200px;
         padding: 0;
-
+        
         .mask {
-            background-color:rgba(0,0,0,0.3);
+            border-radius: 20px;
             cursor: pointer;
             height: 100%;
             width: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-end;
             align-items: center;
             transition: 0.3s ease-in-out;
             padding: 0 10px;
-            h6,p {
-            color: white;
-            }
+
             h6 {
                 text-align: center;
                 margin: 20px;
+                background: url('../img/pattern.png');
+                width: 100%;
+                place-self: center end;
+                
             }
             p {
+                color: white;
                 text-align: justify;
                 display: none;
                 transition: 0.5s ease-in-out;
@@ -164,24 +194,35 @@
 }
 
 #index-fourth-section {
-    padding-top: 30px;
+    margin: 50px 0;
     h3 {
         text-align: center;
-        margin-bottom: 60px;
+        margin-bottom: 80px;
     }
     .service-providers {
         .service-provider {
             height: 100%;
             background-color: white;
-
             border-radius: 10px;
+            
+
             .img-holder {
                 position: relative;
                 top: -50px;
-                left: -5%;
+                left: 10%;
+
+                width: 80%;
                 .service-provider-image {
-                    width: 110%;
+                    width: 100%;
                     box-shadow: 0px 0px 20px 4px rgba(158,158,158,1);
+                }
+                 .service-provider-icon {
+                    position: absolute;
+                    bottom: -10%;
+                    left: 50%;
+                    transform: translate(-50%, 10%);
+                    max-height: 90px;
+                    z-index: 5;
                 }
             }
             .service-provider-details {

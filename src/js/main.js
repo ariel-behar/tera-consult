@@ -17,7 +17,8 @@ let accountingServices = ['Данъчна Защита', 'Счетоводств
 
 let lawServices = ['Семейно Право', 'Наказателно Право', 'Гражданско Право', 'Правно Представителство'];
 
-function ServiceProvider(image, nickname ,name, profession, experience, services){
+function ServiceProvider(icon, image, nickname ,name, profession, experience, services){
+    this.icon = icon;
     this.image = image;
     this.nickname = nickname;
     this.name = name;
@@ -26,15 +27,16 @@ function ServiceProvider(image, nickname ,name, profession, experience, services
     this.services = services;
 }
 
-const rudi = new ServiceProvider('ariel.jpg','rudi', 'Радостин Величков', 'Счетоводител', '23', accountingServices);
+const rudi = new ServiceProvider('accounting.png', 'ariel.jpg','rudi', 'Радостин Величков', 'Счетоводител', '23', accountingServices);
 
-const stanish = new ServiceProvider('ariel.jpg','stanish','Станиш Златков', 'Адвокат', '25', lawServices);
+const stanish = new ServiceProvider('law.png','ariel.jpg','stanish','Станиш Златков', 'Адвокат', '25', lawServices);
 
 function indexPageInsertElements(serviceProvider) {
 
     const serviceProviderDiv = document.querySelector(`#index-page-${serviceProvider.nickname} > .img-holder`)
 
     serviceProviderDiv.insertAdjacentHTML("afterbegin", `<img src="./img/ariel.jpg" alt="${serviceProvider.name} - ${serviceProvider.profession}" class="service-provider-image">`);
+    serviceProviderDiv.insertAdjacentHTML("afterbegin", `<img src="./img/icons/${serviceProvider.icon}" alt="${serviceProvider.icon}" class="service-provider-icon">`);
   
     const providerName = document.querySelector(`#index-page-${serviceProvider.nickname} > .service-provider-details > .name`);
     const providerProfession = document.querySelector(`#index-page-${serviceProvider.nickname}  > .service-provider-details > .profession`);
@@ -47,6 +49,8 @@ function indexPageInsertElements(serviceProvider) {
     serviceProvider.services.forEach(item =>{
         providerServices.innerHTML += `<li>${item}</li>`;
     })
+
+    
 }
 
 indexPageInsertElements(rudi);
@@ -59,16 +63,19 @@ let choiceQualityPar = document.querySelectorAll('#index-third-section .choice-q
 
 choiceQualityMask.forEach(item =>{
     item.addEventListener('mouseenter', () => {
-        item.style.backgroundColor = "rgba(0,0,0,0.5)";
+        item.style.backgroundColor = "rgba(117,117,117,0.7)";
+        item.style.justifyContent = "center";
         item.querySelector('h6').style.display = "none";
 
+        
         item.querySelector('p').style.display = "block";
         item.querySelector('img').style.display = "block";
        
     })
 
     item.addEventListener('mouseleave', () => {
-        item.style.backgroundColor = "rgba(0,0,0,0.2)";
+        item.style.backgroundColor = "rgba(0,0,0,0.0)";
+        item.style.justifyContent = "flex-end";
         item.querySelector('h6').style.display = "block";
         item.querySelector('p').style.display = "none";
         item.querySelector('img').style.display = "none";
