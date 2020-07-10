@@ -40,12 +40,12 @@ function indexPageInsertElements(serviceProvider) {
   
     const providerName = document.querySelector(`#index-page-${serviceProvider.nickname} > .service-provider-details > .name`);
     const providerProfession = document.querySelector(`#index-page-${serviceProvider.nickname}  > .service-provider-details > .profession`);
-    const providerExperience = document.querySelector(`#index-page-${serviceProvider.nickname}  > .service-provider-details > .experience`);
+
     const providerServices = document.querySelector(`#index-page-${serviceProvider.nickname} > .service-provider-details > .services`);
 
     providerName.textContent = serviceProvider.name;
-    providerProfession.textContent = serviceProvider.profession;
-    providerExperience.textContent = serviceProvider.experience + ' години опит';
+    providerProfession.textContent = `${serviceProvider.profession} (${serviceProvider.experience} години)` ;
+
     serviceProvider.services.forEach(item =>{
         providerServices.innerHTML += `<li>${item}</li>`;
     })
@@ -82,8 +82,48 @@ choiceQualityMask.forEach(item =>{
     })
 })
 
-
-
-
-
 //Finish #index-third-section
+
+// Form
+    let form = document.querySelectorAll('.consultation-form');
+
+    let formProvider = document.getElementById('form-provider');
+    let formTopic = document.getElementById('consultation-topic');
+
+    let formFromHours = document.getElementById('consultation-from-hours');
+    let formUntilHours = document.getElementById('consultation-until-hours');
+    let formDays = document.getElementById('consultation-days');
+    let daysOfTheWeek = ['Понеделник', 'Вторник', 'Сряда', 'Четвъртък', 'Петък', 'Събота', 'Неделя'];
+
+    //Populating form provider topics before anything interaction with the user
+    accountingServices.forEach((service, index) => {
+        formTopic.innerHTML += `<option value="${index}">${service}</option>`;
+    }) 
+
+    //Populating form provider topics dynamically with the user's choices
+    formProvider.addEventListener('change', ()=>{
+        let checkedOption = document.querySelector('#form-provider option:checked').value;
+        if(checkedOption == "accountant") {
+            formTopic.innerHTML = '';
+            accountingServices.forEach((service, index) => {
+                formTopic.innerHTML += `<option>${service}</option>`;
+            }) 
+        } else if(checkedOption == 'lawyer') {
+            formTopic.innerHTML = '';
+            lawServices.forEach((service, index) => {
+                formTopic.innerHTML += `<option>${service}</option>`;
+            }) 
+        }
+    })
+
+    daysOfTheWeek.forEach(item =>{
+        formDays.innerHTML += `<option>${item}</option>`
+    });
+
+    for(let i = 9; i<=19;i++) {
+        formFromHours.innerHTML += `<option>${i}</option>`
+        formUntilHours.innerHTML += `<option>${i+1}</option>`
+    }
+    
+
+// END Form

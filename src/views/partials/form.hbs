@@ -1,0 +1,34 @@
+<form action="" method="" class="consultation-form">
+    <label for="fname">Име:</label><br>
+    <input type="text" id="fname" name="fname" required><br>
+
+    <label for="lname">Фамилия:</label><br>
+    <input type="text" id="lname" name="lname" required><br>
+
+    <label for="provider">С кого имате нужда от консултация:</label><br>
+    <select name="provider" id="form-provider" required>
+        <option value="accountant" selected="selected">Счетоводител - Радостин Величков</option>
+        <option value="lawyer">Адвокат - Станиш Златков</option>
+    </select><br>
+
+    <label for="consultation-topic">Тема на консултацията:</label><br>
+    <select name="consultation-topic" id="consultation-topic">
+        {{!-- Consulation topics are populated here --}}
+    </select><br>
+
+    <p>Изберете ден и час в който би ви било най-удобно да се свържем с вас:</p>
+    <label for="form-hours">След:</label>
+    <select name='from-hours' id="consultation-from-hours" required>
+
+    </select>
+    <label for="until-hours">Преди:</label>
+    <select name='until-hours' id="consultation-until-hours" required>
+
+    </select>
+    <select name='days' id="consultation-days" required>
+
+    </select>
+
+    <label for="free-text">Оставете ни съобщение тук: </label>
+    <textarea name="free-text" id="free-text" cols="30" rows="10"></textarea>
+</form>
