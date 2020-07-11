@@ -1,43 +1,43 @@
 <form action="" method="" class="consultation-form">
     <div class="row">
         <div class="col-12 col-md-6 order-2 order-md-1">
-            
-                <label for="fname">Име:</label><br>
-                <input type="text" id="fname" name="fname" required><br>
-            
-                <label for="lname">Фамилия:</label><br>
-                <input type="text" id="lname" name="lname" required><br>
-            
-                <label for="provider">С кого имате нужда от консултация:</label><br>
-                <select name="provider" id="form-provider" required>
-                    <option value="accountant" selected="selected">Счетоводител - Радостин Величков</option>
-                    <option value="lawyer">Адвокат - Станиш Златков</option>
-                </select><br>
-            
-                <label for="consultation-topic">Тема на консултацията:</label><br>
-                <select name="consultation-topic" id="consultation-topic">
-                    {{!-- Consulation topics are populated here --}}
-                </select><br>
-            
-                <p class="mb-0 mt-2">Изберете ден и час в който Ви е най-удобно да се свържем с вас:</p>
-                <div class="w-100 d-flex flex-row align-items-center mt-2">
-                    <label for="form-hours" class="mt-0 mr-2">След:</label>
-                    <select name='from-hours' id="consultation-from-hours" required>
-                        {{!-- From Hours are populated here --}}
-                    </select>
-                    <label for="until-hours" class="mt-0 ml-3 mr-2">Преди:</label>
-                    <select name='until-hours' id="consultation-until-hours" required>
-                        {{!-- Until hours are populated here --}}
-                    </select>
 
-                    <label for="days" class="ml-auto mt-0 mr-2">Ден:</label>
-                    <select name='days' id="consultation-days" required>
-                        {{!-- Consultation Days are populated Here --}}
-                    </select><br>
-                </div>
-            
-                <label for="free-text">Оставете ни свободно съобщение тук: </label><br>
-                <textarea name="free-text" id="free-text" rows="3"></textarea>
+            <label for="fname">Име:</label><br>
+            <input type="text" id="fname" name="fname" required><br>
+
+            <label for="lname">Фамилия:</label><br>
+            <input type="text" id="lname" name="lname" required><br>
+
+            <label for="provider">С кого имате нужда от консултация:</label><br>
+            <select name="provider" id="form-provider" required>
+                <option value="accountant" selected="selected">Счетоводител - Радостин Величков</option>
+                <option value="lawyer">Адвокат - Станиш Златков</option>
+            </select><br>
+
+            <label for="consultation-topic">Тема на консултацията:</label><br>
+            <select name="consultation-topic" id="consultation-topic">
+                {{!-- Consulation topics are populated here --}}
+            </select><br>
+
+            <p class="mb-0 mt-2">Изберете ден и час в който Ви е най-удобно да се свържем с вас:</p>
+            <div class="w-100 d-flex flex-row align-items-center mt-2">
+                <label for="form-hours" class="mt-0 mr-2">След:</label>
+                <select name='from-hours' id="consultation-from-hours" required>
+                    {{!-- From Hours are populated here --}}
+                </select>
+                <label for="until-hours" class="mt-0 ml-3 mr-2">Преди:</label>
+                <select name='until-hours' id="consultation-until-hours" required>
+                    {{!-- Until hours are populated here --}}
+                </select>
+
+                <label for="days" class="ml-auto mt-0 mr-2">Ден:</label>
+                <select name='days' id="consultation-days" required>
+                    {{!-- Consultation Days are populated Here --}}
+                </select><br>
+            </div>
+
+            <label for="free-text">Оставете ни свободно съобщение тук: </label><br>
+            <textarea name="free-text" id="free-text" rows="3"></textarea>
 
         </div>
         <div class="col-12 col-md-5 ml-auto d-flex flex-column justify-content-between order-1 order-md-2">
@@ -48,9 +48,9 @@
 
             {{!-- Button for big screen sizes --}}
             <input type="submit" class="btn btn-info btn-block btn-lg d-none d-md-block mx-auto" value="ИЗПРАТИ">
- 
+
         </div>
-        
+
         {{!-- Button for small screen sizes --}}
         <div class="d-block d-md-none w-100 order-3">
             <input type="submit" class="btn btn-info btn-block mx-auto">
