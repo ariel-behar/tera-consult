@@ -45,8 +45,6 @@ main {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
-    border-left: 1px dashed $light-grey;
-    border-right: 1px dashed $light-grey;
     &>.container {
         display: flex;
         flex-direction: column;
@@ -74,6 +72,6 @@ main {
 }
 
 .form-section {
-   
+
     
 }

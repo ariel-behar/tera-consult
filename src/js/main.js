@@ -93,7 +93,7 @@ choiceQualityMask.forEach(item =>{
     let formFromHours = document.getElementById('consultation-from-hours');
     let formUntilHours = document.getElementById('consultation-until-hours');
     let formDays = document.getElementById('consultation-days');
-    let daysOfTheWeek = ['Понеделник', 'Вторник', 'Сряда', 'Четвъртък', 'Петък', 'Събота', 'Неделя'];
+    let daysOfTheWeek = ['Понеделник', 'Вторник', 'Сряда', 'Четвъртък', 'Петък'];
 
     //Populating form provider topics before anything interaction with the user
     accountingServices.forEach((service, index) => {
@@ -120,10 +120,9 @@ choiceQualityMask.forEach(item =>{
         formDays.innerHTML += `<option>${item}</option>`
     });
 
-    for(let i = 9; i<=19;i++) {
+    for(let i = 10; i<=17;i++) {
         formFromHours.innerHTML += `<option>${i}</option>`
         formUntilHours.innerHTML += `<option>${i+1}</option>`
     }
-    
 
 // END Form
