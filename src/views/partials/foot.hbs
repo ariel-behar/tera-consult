@@ -7,6 +7,21 @@
  {{!-- Custom JS --}}
 <script type="text/javascript" src="/js/main.js"></script>
 
+<script>
+    // Initialize and add the map
+    function initMap() {
+        // The location of Tera Consult
+        let teraConsultLocation = { lat: 42.689058, lng: 23.311170 };
+        // The map
+        let map = new google.maps.Map(
+            document.getElementById('map'), { zoom: 15, center: teraConsultLocation });
+        // The marker
+        let marker = new google.maps.Marker({ position: teraConsultLocation, map: map });
+    }
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key={{API}}&callback=initMap"></script>
+
 </body>
 
 </html>

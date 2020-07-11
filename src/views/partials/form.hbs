@@ -1,34 +1,60 @@
 <form action="" method="" class="consultation-form">
-    <label for="fname">Име:</label><br>
-    <input type="text" id="fname" name="fname" required><br>
+    <div class="row">
+        <div class="col-12 col-md-6 order-2 order-md-1">
 
-    <label for="lname">Фамилия:</label><br>
-    <input type="text" id="lname" name="lname" required><br>
+            <label for="fname">Име:</label><br>
+            <input type="text" id="fname" name="fname" required><br>
 
-    <label for="provider">С кого имате нужда от консултация:</label><br>
-    <select name="provider" id="form-provider" required>
-        <option value="accountant" selected="selected">Счетоводител - Радостин Величков</option>
-        <option value="lawyer">Адвокат - Станиш Златков</option>
-    </select><br>
+            <label for="lname">Фамилия:</label><br>
+            <input type="text" id="lname" name="lname" required><br>
 
-    <label for="consultation-topic">Тема на консултацията:</label><br>
-    <select name="consultation-topic" id="consultation-topic">
-        {{!-- Consulation topics are populated here --}}
-    </select><br>
+            <label for="provider">С кого имате нужда от консултация:</label><br>
+            <select name="provider" id="form-provider" required>
+                <option value="accountant" selected="selected">Счетоводител - Радостин Величков</option>
+                <option value="lawyer">Адвокат - Станиш Златков</option>
+            </select><br>
 
-    <p>Изберете ден и час в който би ви било най-удобно да се свържем с вас:</p>
-    <label for="form-hours">След:</label>
-    <select name='from-hours' id="consultation-from-hours" required>
+            <label for="consultation-topic">Тема на консултацията:</label><br>
+            <select name="consultation-topic" id="consultation-topic">
+                {{!-- Consulation topics are populated here --}}
+            </select><br>
 
-    </select>
-    <label for="until-hours">Преди:</label>
-    <select name='until-hours' id="consultation-until-hours" required>
+            <p class="mb-0 mt-2">Изберете ден и час в който Ви е най-удобно да се свържем с вас:</p>
+            <div class="w-100 d-flex flex-row align-items-center mt-2">
+                <label for="form-hours" class="mt-0 mr-2">След:</label>
+                <select name='from-hours' id="consultation-from-hours" required>
+                    {{!-- From Hours are populated here --}}
+                </select>
+                <label for="until-hours" class="mt-0 ml-3 mr-2">Преди:</label>
+                <select name='until-hours' id="consultation-until-hours" required>
+                    {{!-- Until hours are populated here --}}
+                </select>
 
-    </select>
-    <select name='days' id="consultation-days" required>
+                <label for="days" class="ml-auto mt-0 mr-2">Ден:</label>
+                <select name='days' id="consultation-days" required>
+                    {{!-- Consultation Days are populated Here --}}
+                </select><br>
+            </div>
 
-    </select>
+            <label for="free-text">Оставете ни свободно съобщение тук: </label><br>
+            <textarea name="free-text" id="free-text" rows="3"></textarea>
 
-    <label for="free-text">Оставете ни съобщение тук: </label>
-    <textarea name="free-text" id="free-text" cols="30" rows="10"></textarea>
+        </div>
+        <div class="col-12 col-md-5 ml-auto d-flex flex-column justify-content-between order-1 order-md-2">
+            <h5>Lorem, ipsum dolor.</h5>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque quasi impedit nam quis ipsa, saepe delectus architecto itaque adipisci blanditiis a aliquam cumque consectetur consequuntur nobis? Iste ut perferendis quidem.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, qui beatae, sit tenetur facere deleniti eum quaerat exercitationem sint ut soluta omnis ex? Quisquam necessitatibus, hic pariatur omnis officiis esse ipsam sit quas unde blanditiis modi eaque at voluptate voluptates?</p>
+
+            {{!-- Button for big screen sizes --}}
+            <input type="submit" class="btn btn-info btn-block btn-lg d-none d-md-block mx-auto" value="ИЗПРАТИ">
+
+        </div>
+
+        {{!-- Button for small screen sizes --}}
+        <div class="d-block d-md-none w-100 order-3">
+            <input type="submit" class="btn btn-info btn-block mx-auto">
+        </div>
+    </div>
+
 </form>
