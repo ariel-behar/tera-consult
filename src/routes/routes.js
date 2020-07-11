@@ -1,15 +1,15 @@
 const express = require('express');
-const dotenv = require('dotenv');
+// const dotenv = require('dotenv');
 const router = express.Router();
 
-//Dotenv used to hide email and password credentials
-dotenv.config();
+
+// dotenv.config();
 
 router.get('/', (req, res, next) => {
     res.render('index', {
         title: 'Начало',
         clients: '123456',
-        API: process.env.API
+        // API: process.env.API
 
     });
 });
